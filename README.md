@@ -3,7 +3,7 @@
 
 # Test Local
  set NODE_ENV=development
-
+<!-- 
 # AWS
  Dev host : https://ndev.1112delivery.com
  Prod host : https://n.1112delivery.com
@@ -62,4 +62,4 @@
       * Show the store name
   * version 1.2.2
       * Add one job for database clearing every 30th day of month
-      * Removed subtotal and vat as displaying on message
+      * Removed subtotal and vat as displaying on message -->
