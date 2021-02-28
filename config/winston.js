@@ -30,7 +30,8 @@ var logger = caller => {
             new (winston.transports.Console)({
                 json: true,
                 //format: winston.format.printf(info => `${new Date().toISOString()} | ${info.label} | ${info.level} | ${info.message}`),
-                format: winston.format.printf(info => `${moment().tz('Asia/Bangkok').format()} | ${info.label} | ${info.level} | ${info.message}`),
+                //.tz('Asia/Bangkok')
+                format: winston.format.printf(info => `${moment().format()} | ${info.label} | ${info.level} | ${info.message}`),
                 colorize: true
             })
         ]

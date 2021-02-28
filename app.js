@@ -68,7 +68,8 @@ if (config.env === 'development') {
             new (winstonInstance.transports.Console)({
                 json: true,
                 colorize: true,
-                format: winstonInstance.format.printf(info => `${moment().tz('Asia/Bangkok').format()} | ${info.label} | ${info.level} | ${info.message}`)
+                //.tz('Asia/Bangkok')
+                format: winstonInstance.format.printf(info => `${moment().format()} | ${info.label} | ${info.level} | ${info.message}`)
             })
 
         ],
@@ -121,7 +122,8 @@ if (config.env !== 'test') {
             new (winstonInstance.transports.Console)({
                 json: true,
                 colorize: true,
-                format: winstonInstance.format.printf(info => `${moment().tz('Asia/Bangkok').format()} | ${info.label} | ${info.level} | ${info.message}`)
+                //.tz('Asia/Bangkok')
+                format: winstonInstance.format.printf(info => `${moment().format()} | ${info.label} | ${info.level} | ${info.message}`)
             })
         ],
         format: winstonInstance.format.combine(
@@ -140,6 +142,7 @@ if (config.env !== 'test') {
 
 // error handler, send stacktrace only during development
 app.use((err, req, res, next) => {// eslint-disable-line no-unused-vars
+    console.log(err)
     res.status(err.status).json({
         code: err.status,
         message: err.isPublic ? err.message : httpStatus[err.status],
