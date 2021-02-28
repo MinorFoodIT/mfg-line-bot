@@ -29,6 +29,6 @@ COPY . .
 #RUN chown -R node:node .
 RUN pwd
 
-EXPOSE 4100
+EXPOSE 3000
 
 CMD [ "npm","run","start" ]
