@@ -19,7 +19,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.linebot.entrypoints=websecure"
-      - "traefik.http.routers.linebot.rule=Host(`line-bot.dolfinminor.net`)"
+      - "traefik.http.routers.linebot.rule=Host(`linebot.dolfinminor.net`)"
       - "traefik.http.routers.linebot.service=line-bot"
       - "traefik.http.routers.linebot.tls=true"
       - "traefik.http.services.line-bot.loadbalancer.server.port=3000"
