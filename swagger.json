@@ -1,0 +1,197 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "1112delivery Order Notification.",
+    "version": "1.0.0",
+    "title": "1112delivery Order Notification APIs",
+    "termsOfService": "",
+    "contact": {
+      "email": "akarat_su@minor.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "n.1112delivery.com",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "1112delivery",
+      "description": "1112delivery order notification"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v1/bot/1112delivery/{brand}": {
+      "post": {
+        "tags": [
+          "1112delivery"
+        ],
+        "summary": "Send order notification",
+        "description": "Assign ordering by brand",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "brand",
+            "in": "path",
+            "description": "Brand identifier ,example DQ is Dairy Queen",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "1112delivery object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/1112delivery"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/response"
+            }
+          },
+          "400": {
+            "description": "Invalid data",
+            "schema": {
+              "$ref": "#/definitions/response"
+            }
+          },
+          "404": {
+            "description": "API not found",
+            "schema": {
+              "$ref": "#/definitions/response"
+            }
+          }
+        },
+        "_security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "_securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "1112delivery": {
+      "type": "object",
+      "properties": {
+        "SDM": {
+          "type": "object",
+          "properties": {
+            "DateOfTrans": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "Entries": {
+              "type": "array",
+              "items": {}
+            },
+            "OrderName": {
+              "type": "string"
+            },
+            "StoreName": {
+              "type": "string"
+            },
+            "StoreNumber": {
+              "type": "string"
+            },
+            "GrossTotal": {
+              "type": "string"
+            },
+            "Payments": {
+              "type": "string"
+            }
+          }
+        },
+        "Note": {
+          "type": "string"
+        },
+        "Customer": {
+          "type": "object",
+          "properties": {
+            "Profile": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "type": "string"
+                },
+                "Lastname": {
+                  "type": "string"
+                },
+                "Telphone": {
+                  "type": "string"
+                }
+              }
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "Line1": {
+                  "type": "string"
+                },
+                "Line2": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                },
+                "PostalCode": {
+                  "type": "string"
+                }
+              }
+            },
+            "TaxInvoice": {
+              "type": "object",
+              "properties": {
+                "Invoice": {
+                  "type": "string"
+                },
+                "Print": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "stack": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

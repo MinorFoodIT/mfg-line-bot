@@ -1,0 +1,19 @@
+{
+  "type": "box",
+  "layout": "baseline",
+  "contents": [
+    {
+      "type": "icon",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Dairy_Queen_logo.svg/2000px-Dairy_Queen_logo.svg.png",
+      "size": "md",
+      "margin": "xl"
+    },
+    {
+      "type": "text",
+      "text": "Dairy Queen",
+      "weight": "bold",
+      "color": "#f43934",
+      "size": "md"
+    }
+  ]
+}

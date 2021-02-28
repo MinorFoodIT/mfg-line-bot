@@ -1,0 +1,28 @@
+{
+  "type": "bubble",
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "รหัสร้านที่คุณตั้งค่าไว้คือ",
+        "weight": "bold",
+        "size": "sm",
+        "margin": "md"
+      },
+      {
+        "type": "text",
+        "text": "",
+        "size": "xs",
+        "color": "#0A0A0A",
+        "wrap": true
+      }
+    ]
+  }
+}

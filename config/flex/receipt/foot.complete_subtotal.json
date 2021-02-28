@@ -1,0 +1,22 @@
+{
+  "type": "box",
+  "layout": "horizontal",
+  "margin": "xl",
+  "spacing": "sm",
+  "contents": [
+    {
+      "type": "text",
+      "text": "Complete SubTotal",
+      "size": "sm",
+      "color": "#555555",
+      "flex": 0
+    },
+    {
+      "type": "text",
+      "text": "",
+      "size": "sm",
+      "color": "#111111",
+      "align": "end"
+    }
+  ]
+}

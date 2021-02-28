@@ -1,0 +1,20 @@
+{
+  "type": "box",
+  "layout": "horizontal",
+  "contents": [
+    {
+      "type": "text",
+      "text": "DQ-BZ-MANGO STICKY (M)",
+      "size": "sm",
+      "color": "#555555",
+      "flex": 0
+    },
+    {
+      "type": "text",
+      "text": "50",
+      "size": "sm",
+      "color": "#111111",
+      "align": "end"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "type": "bubble",
+  "styles": {
+    "footer": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "เริ่มต้นใช้งาน notification",
+        "weight": "bold",
+        "size": "sm",
+        "margin": "md"
+      },
+      {
+        "type": "text",
+        "text": "กรุณาตั้งค่า รหัสสาขาโดยระบุตามรูปแบบดังนี้",
+        "weight": "bold",
+        "size": "sm",
+        "margin": "md"
+      },
+      {
+        "type": "text",
+        "text": "@site=รหัสสาขา 4 หลัก",
+        "size": "xs",
+        "color": "#0A0A0A",
+        "wrap": true
+      },
+      {
+        "type": "separator",
+        "margin": "xl"
+      },
+      {
+        "type": "text",
+        "text": " ",
+        "size": "xs",
+        "color": "#0A0A0A",
+        "wrap": true
+      },
+      {
+        "type": "text",
+        "text": "ตัวอย่างเช่น",
+        "size": "xs",
+        "color": "#0A0A0A",
+        "wrap": true
+      },
+      {
+        "type": "text",
+        "text": "@site=DQ1001",
+        "size": "xs",
+        "color": "#0A0A0A",
+        "wrap": true
+      }
+    ]
+  }
+}

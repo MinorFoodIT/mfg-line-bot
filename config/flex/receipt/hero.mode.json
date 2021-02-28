@@ -1,0 +1,22 @@
+{
+  "type": "box",
+  "layout": "horizontal",
+  "margin": "xs",
+  "spacing": "sm",
+  "contents": [
+    {
+      "type": "text",
+      "text": "Order Type:",
+      "size": "sm",
+      "color": "#555555",
+      "flex": 0
+    },
+    {
+      "type": "text",
+      "text": "DELIVERY",
+      "size": "sm",
+      "color": "#111111",
+      "align": "end"
+    }
+  ]
+}

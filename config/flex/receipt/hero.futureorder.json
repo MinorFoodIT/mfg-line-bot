@@ -1,0 +1,22 @@
+{
+  "type": "box",
+  "layout": "horizontal",
+  "margin": "sm",
+  "spacing": "sm",
+  "contents": [
+    {
+      "type": "text",
+      "text": "** ส่ังล่วงหน้า **",
+      "size": "xs",
+      "color": "#009999",
+      "flex": 0
+    },
+    {
+      "type": "text",
+      "text": "",
+      "size": "sm",
+      "color": "#009999",
+      "align": "end"
+    }
+  ]
+}
